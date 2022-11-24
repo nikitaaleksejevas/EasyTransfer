@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="EasyTransfer" customModuleProvider="target">
             <connections>
+                <outlet property="passwordTextField" destination="ZNf-Uf-CBM" id="TQ3-do-Ux5"/>
+                <outlet property="usernameTextField" destination="ZNf-Uf-CBM" id="xPs-ot-byF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,6 +66,9 @@
                         <backgroundConfiguration key="background"/>
                         <color key="baseBackgroundColor" red="0.54501461979999999" green="0.2138562799" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signInOnTaped:" destination="-1" eventType="touchUpInside" id="CRi-NR-2jY"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signingin in Easytransfer you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-Rn-JUf">
                     <rect key="frame" x="20" y="788" width="350" height="12"/>
@@ -84,6 +89,9 @@
                             </fragment>
                         </attributedString>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpOnTapped:" destination="-1" eventType="touchUpInside" id="bXw-um-kbK"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
