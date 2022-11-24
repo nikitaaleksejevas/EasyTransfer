@@ -21,7 +21,13 @@ class LoginViewController: UIViewController {
     }
 
     
-    @IBAction private func signInOnTapped(_ sender: Any) {
+
+    @IBAction func signInTapped(_ sender: Any) {
+        
+        let homeVC = HomeViewController()
+        homeVC.modalPresentationStyle = .fullScreen
+        present(homeVC, animated: true)
+        
     }
     
     

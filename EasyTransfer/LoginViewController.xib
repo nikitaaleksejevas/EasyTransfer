@@ -67,7 +67,7 @@
                         <color key="baseBackgroundColor" red="0.54501461979999999" green="0.2138562799" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="signInOnTaped:" destination="-1" eventType="touchUpInside" id="CRi-NR-2jY"/>
+                        <action selector="signInTapped:" destination="-1" eventType="touchUpInside" id="nmm-Iq-eS7"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signingin in Easytransfer you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-Rn-JUf">

@@ -13,6 +13,8 @@
 		11109EE2292FEA1300D7AFC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11109EE0292FEA1300D7AFC6 /* LaunchScreen.storyboard */; };
 		11109EEB292FEAC900D7AFC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11109EE9292FEAC900D7AFC6 /* LoginViewController.swift */; };
 		11109EEC292FEAC900D7AFC6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11109EEA292FEAC900D7AFC6 /* LoginViewController.xib */; };
+		11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11109EED292FF3DA00D7AFC6 /* HomeViewController.swift */; };
+		11109EF0292FF3DA00D7AFC6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		11109EE3292FEA1300D7AFC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11109EE9292FEAC900D7AFC6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		11109EEA292FEAC900D7AFC6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		11109EED292FF3DA00D7AFC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				11109EE3292FEA1300D7AFC6 /* Info.plist */,
 				11109EE9292FEAC900D7AFC6 /* LoginViewController.swift */,
 				11109EEA292FEAC900D7AFC6 /* LoginViewController.xib */,
+				11109EED292FF3DA00D7AFC6 /* HomeViewController.swift */,
+				11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */,
 			);
 			path = EasyTransfer;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				11109EE2292FEA1300D7AFC6 /* LaunchScreen.storyboard in Resources */,
 				11109EDF292FEA1300D7AFC6 /* Assets.xcassets in Resources */,
 				11109EEC292FEAC900D7AFC6 /* LoginViewController.xib in Resources */,
+				11109EF0292FF3DA00D7AFC6 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				11109EEB292FEAC900D7AFC6 /* LoginViewController.swift in Sources */,
 				11109ED6292FEA1200D7AFC6 /* AppDelegate.swift in Sources */,
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
+				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
