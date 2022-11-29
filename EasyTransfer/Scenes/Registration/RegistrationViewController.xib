@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="EasyTransfer" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JBa-TH-fxR">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up.right.and.arrow.down.left.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z0d-hB-KZ5">
+                    <rect key="frame" x="120" y="98.666666666666657" width="150" height="147"/>
+                    <color key="tintColor" red="0.54501461979999999" green="0.2138562799" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="San-hv-cEF"/>
+                        <constraint firstAttribute="width" constant="150" id="pvZ-lm-9jU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registartion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0an-Ac-KpC">
+                    <rect key="frame" x="20" y="272" width="350" height="35"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-hK-bdN">
+                    <rect key="frame" x="50" y="327" width="290" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FBM-bs-xRg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwrod" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yK7-oJ-KFh">
+                    <rect key="frame" x="50" y="392" width="290" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="kWY-YO-mKq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-4W-Sg4">
+                    <rect key="frame" x="120" y="522" width="150" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="88y-zr-dyW"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Sign up">
+                        <backgroundConfiguration key="background"/>
+                        <color key="baseBackgroundColor" red="0.54501461979999999" green="0.2138562799" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signingin in Easytransfer you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLn-w5-4Gs">
+                    <rect key="frame" x="20" y="788" width="350" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm passwrod" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9Q-mq-9Ca">
+                    <rect key="frame" x="50" y="457" width="290" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="0D6-WV-7sr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="A0V-GT-g6X"/>
+            <color key="backgroundColor" red="0.84542161230000001" green="0.84822309019999997" blue="0.87122720480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yK7-oJ-KFh" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="50" id="0nO-uX-fgO"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="RLn-w5-4Gs" secondAttribute="trailing" constant="20" id="5Ff-Ub-Zdq"/>
+                <constraint firstItem="CRu-hK-bdN" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="50" id="5NO-sM-i8H"/>
+                <constraint firstItem="CRu-hK-bdN" firstAttribute="top" secondItem="0an-Ac-KpC" secondAttribute="bottom" constant="20" id="DyB-OR-bu5"/>
+                <constraint firstItem="H9Q-mq-9Ca" firstAttribute="top" secondItem="yK7-oJ-KFh" secondAttribute="bottom" constant="15" id="Fvk-pt-06h"/>
+                <constraint firstItem="RLn-w5-4Gs" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="H2v-uW-i5a"/>
+                <constraint firstItem="z0d-hB-KZ5" firstAttribute="top" secondItem="A0V-GT-g6X" secondAttribute="top" constant="50" id="J0r-4m-XvZ"/>
+                <constraint firstItem="H9Q-mq-9Ca" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="50" id="OtC-YK-wk9"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="0an-Ac-KpC" secondAttribute="trailing" constant="20" id="Q54-en-etT"/>
+                <constraint firstItem="yK7-oJ-KFh" firstAttribute="top" secondItem="CRu-hK-bdN" secondAttribute="bottom" constant="15" id="SmU-dg-K4b"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="hRZ-4W-Sg4" secondAttribute="trailing" constant="120" id="VEC-El-zOg"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="CRu-hK-bdN" secondAttribute="trailing" constant="50" id="XdS-wl-oYL"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="bottom" secondItem="RLn-w5-4Gs" secondAttribute="bottom" constant="10" id="c6g-fH-xfj"/>
+                <constraint firstItem="0an-Ac-KpC" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="dYK-Vc-few"/>
+                <constraint firstItem="hRZ-4W-Sg4" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="120" id="lBb-sF-jnr"/>
+                <constraint firstItem="z0d-hB-KZ5" firstAttribute="centerX" secondItem="JBa-TH-fxR" secondAttribute="centerX" id="qvw-7c-YlY"/>
+                <constraint firstItem="0an-Ac-KpC" firstAttribute="top" secondItem="z0d-hB-KZ5" secondAttribute="bottom" constant="25" id="uDL-Z2-2wr"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="yK7-oJ-KFh" secondAttribute="trailing" constant="50" id="wrc-h7-EcO"/>
+                <constraint firstItem="hRZ-4W-Sg4" firstAttribute="top" secondItem="H9Q-mq-9Ca" secondAttribute="bottom" constant="15" id="xE0-Uk-rgJ"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="H9Q-mq-9Ca" secondAttribute="trailing" constant="50" id="xeB-nv-GXq"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.up.right.and.arrow.down.left.rectangle" catalog="system" width="128" height="93"/>
+    </resources>
+</document>

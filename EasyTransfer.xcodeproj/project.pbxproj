@@ -15,6 +15,8 @@
 		11109EEC292FEAC900D7AFC6 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11109EEA292FEAC900D7AFC6 /* LoginViewController.xib */; };
 		11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11109EED292FF3DA00D7AFC6 /* HomeViewController.swift */; };
 		11109EF0292FF3DA00D7AFC6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */; };
+		112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD6C2935ECC7001EA7B1 /* RegistrationViewController.swift */; };
+		112DCD6F2935ECC7001EA7B1 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		11109EEA292FEAC900D7AFC6 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		11109EED292FF3DA00D7AFC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		112DCD6C2935ECC7001EA7B1 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,59 @@
 		11109ED4292FEA1200D7AFC6 /* EasyTransfer */ = {
 			isa = PBXGroup;
 			children = (
-				11109ED5292FEA1200D7AFC6 /* AppDelegate.swift */,
-				11109ED7292FEA1200D7AFC6 /* SceneDelegate.swift */,
+				112DCD712935F1E4001EA7B1 /* Scenes */,
+				112DCD702935F1CF001EA7B1 /* Main */,
 				11109EDE292FEA1300D7AFC6 /* Assets.xcassets */,
 				11109EE0292FEA1300D7AFC6 /* LaunchScreen.storyboard */,
 				11109EE3292FEA1300D7AFC6 /* Info.plist */,
+			);
+			path = EasyTransfer;
+			sourceTree = "<group>";
+		};
+		112DCD702935F1CF001EA7B1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				11109ED5292FEA1200D7AFC6 /* AppDelegate.swift */,
+				11109ED7292FEA1200D7AFC6 /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		112DCD712935F1E4001EA7B1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				112DCD742935F204001EA7B1 /* Home */,
+				112DCD732935F1F8001EA7B1 /* Registration */,
+				112DCD722935F1EE001EA7B1 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		112DCD722935F1EE001EA7B1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				11109EE9292FEAC900D7AFC6 /* LoginViewController.swift */,
 				11109EEA292FEAC900D7AFC6 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		112DCD732935F1F8001EA7B1 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				112DCD6C2935ECC7001EA7B1 /* RegistrationViewController.swift */,
+				112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		112DCD742935F204001EA7B1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				11109EED292FF3DA00D7AFC6 /* HomeViewController.swift */,
 				11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */,
 			);
-			path = EasyTransfer;
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112DCD6F2935ECC7001EA7B1 /* RegistrationViewController.xib in Resources */,
 				11109EE2292FEA1300D7AFC6 /* LaunchScreen.storyboard in Resources */,
 				11109EDF292FEA1300D7AFC6 /* Assets.xcassets in Resources */,
 				11109EEC292FEAC900D7AFC6 /* LoginViewController.xib in Resources */,
@@ -149,6 +196,7 @@
 				11109ED6292FEA1200D7AFC6 /* AppDelegate.swift in Sources */,
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
+				112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
