@@ -17,6 +17,8 @@
 		11109EF0292FF3DA00D7AFC6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */; };
 		112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD6C2935ECC7001EA7B1 /* RegistrationViewController.swift */; };
 		112DCD6F2935ECC7001EA7B1 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */; };
+		112DCD7829360227001EA7B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7729360227001EA7B1 /* User.swift */; };
+		112DCD7A29360237001EA7B1 /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7929360237001EA7B1 /* UsersManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		112DCD6C2935ECC7001EA7B1 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		112DCD7729360227001EA7B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		112DCD7929360237001EA7B1 /* UsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 		11109ED4292FEA1200D7AFC6 /* EasyTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				112DCD7629360214001EA7B1 /* Managers */,
+				112DCD75293601F8001EA7B1 /* Models */,
 				112DCD712935F1E4001EA7B1 /* Scenes */,
 				112DCD702935F1CF001EA7B1 /* Main */,
 				11109EDE292FEA1300D7AFC6 /* Assets.xcassets */,
@@ -117,6 +123,22 @@
 				11109EEE292FF3DA00D7AFC6 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		112DCD75293601F8001EA7B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				112DCD7729360227001EA7B1 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		112DCD7629360214001EA7B1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				112DCD7929360237001EA7B1 /* UsersManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,9 +216,11 @@
 			files = (
 				11109EEB292FEAC900D7AFC6 /* LoginViewController.swift in Sources */,
 				11109ED6292FEA1200D7AFC6 /* AppDelegate.swift in Sources */,
+				112DCD7829360227001EA7B1 /* User.swift in Sources */,
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
 				112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */,
+				112DCD7A29360237001EA7B1 /* UsersManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
