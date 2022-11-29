@@ -30,6 +30,8 @@ class HomeViewController: UIViewController {
     
     @IBAction private func logoutTapped(_ sender: Any) {
         
+        self.dismiss(animated: true)
+        
     }
     
 }

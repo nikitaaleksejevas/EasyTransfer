@@ -7,42 +7,52 @@
 
 import Foundation
 
+struct Result {
+    let errorMessage: String?
+    let user: User?
+}
+
 class UserManager {
     
-    var users: [User] = []
+    var users: [User] = [
+        User(username: "a", password: "b")
+    ]
     
-    func register(username: String, password: String, confirmpassword: String){
+    func register(username: String, password: String, confirmpassword: String) -> Result{
         
         guard !username.isEmpty, !password.isEmpty else {
-            return print("username and password is empty")
+            return Result(errorMessage: "Username or password is empty", user: nil)
         }
         
         for user in users {
             if username == user.username {
-                return print("username already exists")
+                return Result(errorMessage: "Username already exists", user: nil)
             }
         }
         
         if password != confirmpassword {
-            return print("password doesnt match")
+            return Result(errorMessage: "Passwords doesn't match", user: nil)
         }
         
         let user = User(username: username, password: password)
         users.append(user)
         
+        return Result(errorMessage: nil, user: nil)
     }
     
-    func login(username: String, password: String){
+    func login(username: String, password: String) -> Result {
         
-        for user in users {
-            
-            if username == user.username && password == user.password {
-            }
-            print("username or password doesnt match")
+        let currentUser = users.first { user in
+            user.username == username
+        }
+        guard let user = currentUser else {
+            return Result(errorMessage: "Incorrect username or password.", user: nil)
         }
         
+        if user.password != password {
+            return Result(errorMessage: "Incorrect username or password.", user: nil)
+        }
         
+        return Result(errorMessage: nil, user: user)
     }
-    
-    
 }

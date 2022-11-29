@@ -25,7 +25,9 @@ class RegistrationViewController: UIViewController {
     
     @IBAction private func signupTapped(_ sender: Any) {
         
-
+//        userManager.register(username: usernameTextField.text!, password: passwordTextField.text!, confirmpassword: confirmPasswordTextField.text!)
+        
+        
         let homeVC = HomeViewController()
 //        homeVC.modalPresentationStyle = .fullScreen
         present(homeVC, animated: true)
