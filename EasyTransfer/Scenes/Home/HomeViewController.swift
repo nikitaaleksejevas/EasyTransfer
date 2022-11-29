@@ -8,7 +8,14 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    
+    @IBOutlet private weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var balanceLabel: UILabel!
+    @IBOutlet private weak var sendToUserTextField: UITextField!
+    @IBOutlet private weak var amountTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +23,13 @@ class HomeViewController: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction private func sendTapped(_ sender: Any) {
     }
-    */
-
+    
+    
+    @IBAction private func logoutTapped(_ sender: Any) {
+        
+    }
+    
 }

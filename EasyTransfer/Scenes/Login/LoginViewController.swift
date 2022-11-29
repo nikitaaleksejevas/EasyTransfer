@@ -10,9 +10,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +21,21 @@ class LoginViewController: UIViewController {
 
     
 
-    @IBAction func signInTapped(_ sender: Any) {
+    @IBAction private func signInTapped(_ sender: Any) {
         
         let homeVC = HomeViewController()
-        homeVC.modalPresentationStyle = .fullScreen
-        present(homeVC, animated: true)
+//        homeVC.modalPresentationStyle = .fullScreen
+//        present(homeVC, animated: true)
+        show(homeVC, sender: self)
+    }
+
+    
+    @IBAction private func signupTapped(_ sender: Any) {
         
+        let registrationVC = RegistrationViewController()
+        show(registrationVC, sender: self)
     }
     
-    
-    @IBAction private func signUpOnTapped(_ sender: Any) {
-    }
     
     
 }

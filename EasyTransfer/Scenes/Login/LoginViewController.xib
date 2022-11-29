@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="EasyTransfer" customModuleProvider="target">
             <connections>
-                <outlet property="passwordTextField" destination="ZNf-Uf-CBM" id="TQ3-do-Ux5"/>
-                <outlet property="usernameTextField" destination="ZNf-Uf-CBM" id="xPs-ot-byF"/>
+                <outlet property="passwordTextField" destination="ZNf-Uf-CBM" id="HX2-pt-H3h"/>
+                <outlet property="usernameTextField" destination="zui-Cw-nEU" id="V8F-Mm-yxG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -90,7 +90,7 @@
                         </attributedString>
                     </buttonConfiguration>
                     <connections>
-                        <action selector="signUpOnTapped:" destination="-1" eventType="touchUpInside" id="bXw-um-kbK"/>
+                        <action selector="signupTapped:" destination="-1" eventType="touchUpInside" id="8Az-4G-2ir"/>
                     </connections>
                 </button>
             </subviews>
