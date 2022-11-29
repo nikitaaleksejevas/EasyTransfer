@@ -4,12 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistrationViewController" customModule="EasyTransfer" customModuleProvider="target">
             <connections>
                 <outlet property="confirmPasswordTextField" destination="H9Q-mq-9Ca" id="oXa-eJ-F8w"/>
+                <outlet property="errorMessageLabel" destination="HNj-3p-db6" id="UUO-6c-gp6"/>
                 <outlet property="passwordTextField" destination="yK7-oJ-KFh" id="Qfx-Tt-dAp"/>
                 <outlet property="usernameTextField" destination="CRu-hK-bdN" id="0Tn-Lj-ndU"/>
                 <outlet property="view" destination="JBa-TH-fxR" id="ueX-d8-DkT"/>
@@ -78,6 +80,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-3p-db6">
+                    <rect key="frame" x="20" y="509" width="350" height="11"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="A0V-GT-g6X"/>
             <color key="backgroundColor" red="0.84542161230000001" green="0.84822309019999997" blue="0.87122720480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,6 +93,7 @@
                 <constraint firstItem="yK7-oJ-KFh" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="50" id="0nO-uX-fgO"/>
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="RLn-w5-4Gs" secondAttribute="trailing" constant="20" id="5Ff-Ub-Zdq"/>
                 <constraint firstItem="CRu-hK-bdN" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="50" id="5NO-sM-i8H"/>
+                <constraint firstItem="HNj-3p-db6" firstAttribute="top" secondItem="H9Q-mq-9Ca" secondAttribute="bottom" constant="2" id="8EB-Mt-jjH"/>
                 <constraint firstItem="CRu-hK-bdN" firstAttribute="top" secondItem="0an-Ac-KpC" secondAttribute="bottom" constant="20" id="DyB-OR-bu5"/>
                 <constraint firstItem="H9Q-mq-9Ca" firstAttribute="top" secondItem="yK7-oJ-KFh" secondAttribute="bottom" constant="15" id="Fvk-pt-06h"/>
                 <constraint firstItem="RLn-w5-4Gs" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="H2v-uW-i5a"/>
@@ -93,9 +102,11 @@
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="0an-Ac-KpC" secondAttribute="trailing" constant="20" id="Q54-en-etT"/>
                 <constraint firstItem="yK7-oJ-KFh" firstAttribute="top" secondItem="CRu-hK-bdN" secondAttribute="bottom" constant="15" id="SmU-dg-K4b"/>
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="hRZ-4W-Sg4" secondAttribute="trailing" constant="120" id="VEC-El-zOg"/>
+                <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="HNj-3p-db6" secondAttribute="trailing" constant="20" id="Woe-ST-1aP"/>
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="CRu-hK-bdN" secondAttribute="trailing" constant="50" id="XdS-wl-oYL"/>
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="bottom" secondItem="RLn-w5-4Gs" secondAttribute="bottom" constant="10" id="c6g-fH-xfj"/>
                 <constraint firstItem="0an-Ac-KpC" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="dYK-Vc-few"/>
+                <constraint firstItem="HNj-3p-db6" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="jjc-ZA-K30"/>
                 <constraint firstItem="hRZ-4W-Sg4" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="120" id="lBb-sF-jnr"/>
                 <constraint firstItem="z0d-hB-KZ5" firstAttribute="centerX" secondItem="JBa-TH-fxR" secondAttribute="centerX" id="qvw-7c-YlY"/>
                 <constraint firstItem="0an-Ac-KpC" firstAttribute="top" secondItem="z0d-hB-KZ5" secondAttribute="bottom" constant="25" id="uDL-Z2-2wr"/>
@@ -108,5 +119,8 @@
     </objects>
     <resources>
         <image name="arrow.up.right.and.arrow.down.left.rectangle" catalog="system" width="128" height="93"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

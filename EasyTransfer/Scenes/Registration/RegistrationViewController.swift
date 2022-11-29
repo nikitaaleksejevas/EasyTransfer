@@ -13,6 +13,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     let userManager = UserManager()
     
@@ -25,15 +26,16 @@ class RegistrationViewController: UIViewController {
     
     @IBAction private func signupTapped(_ sender: Any) {
         
-//        userManager.register(username: usernameTextField.text!, password: passwordTextField.text!, confirmpassword: confirmPasswordTextField.text!)
+        let result = userManager.register(username: usernameTextField.text!, password: passwordTextField.text!, confirmpassword: confirmPasswordTextField.text!)
         
-        
-        let homeVC = HomeViewController()
-//        homeVC.modalPresentationStyle = .fullScreen
-        present(homeVC, animated: true)
-        
+        if let errorMessage = result.errorMessage {
+            errorMessageLabel.isHidden = false
+            errorMessageLabel.text = errorMessage
+        } else {
+            errorMessageLabel.isHidden = true
+            let homeVC = HomeViewController()
+            homeVC.modalPresentationStyle = .fullScreen
+            present(homeVC, animated: true)
+        }
     }
-    
-    
-
 }

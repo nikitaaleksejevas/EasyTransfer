@@ -21,17 +21,17 @@ class UserManager {
     func register(username: String, password: String, confirmpassword: String) -> Result{
         
         guard !username.isEmpty, !password.isEmpty else {
-            return Result(errorMessage: "Username or password is empty", user: nil)
+            return Result(errorMessage: "Username or password is empty.", user: nil)
         }
         
         for user in users {
             if username == user.username {
-                return Result(errorMessage: "Username already exists", user: nil)
+                return Result(errorMessage: "Username already exists.", user: nil)
             }
         }
         
         if password != confirmpassword {
-            return Result(errorMessage: "Passwords doesn't match", user: nil)
+            return Result(errorMessage: "Passwords doesn't match.", user: nil)
         }
         
         let user = User(username: username, password: password)
