@@ -31,6 +31,19 @@ class HomeViewController: UIViewController {
     
     @IBAction private func sendTapped(_ sender: Any) {
         
+        guard let amount = Double(amountTextField.text!) else {
+            return
+        }
+        
+        
+        
+        let result =  userManager.transfer(sender: user, sendTo: sendToUserTextField.text! , amount: amount)
+        balanceLabel.text = String(user.balance)
+        
+        
+
+        
+        
     }
     
     

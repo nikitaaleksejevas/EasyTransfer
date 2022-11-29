@@ -70,16 +70,21 @@ class UserManager {
     
     
     
-//    func transfer(userID: String, amount: Double) -> Result {
-//
-//        let currentUser = users.first(where: { $0.username == userID })
-//
-//        guard var user = currentUser else {
-//            return Result(errorMessage: "Current user doesnt exist!", user: nil, balance: nil)
-//        }
-//
-//        user.balance -= amount
-//
-//        return Result(errorMessage: nil, user: nil, balance: user.balance)
-//    }
+    
+    func transfer(sender: User, sendTo userID: String, amount: Double) -> Result {
+
+        guard sender.balance >= 0 else {
+            return Result(errorMessage: "Your balance bellow zero.", user: nil, balance: nil)
+        }
+        
+        
+        let currentUser = users.first(where: { $0.username == userID })
+        guard let user = currentUser else {
+            return Result(errorMessage: "Current user doesnt exist!", user: nil, balance: nil)
+        }
+        
+        user.balance += amount
+        sender.balance -= amount
+        return Result(errorMessage: nil, user: nil, balance: user.balance)
+    }
 }
