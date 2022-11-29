@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorMessageLabel: UILabel!
     
-    let usermanager = UserManager()
+    let userManager = UserManager()
     var user: User?
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
 
     @IBAction  func signInTapped(_ sender: Any) {
         
-        let result = usermanager.login(username: usernameTextField.text!, password: passwordTextField.text!)
+        let result = userManager.login(username: usernameTextField.text!, password: passwordTextField.text!)
         
         if let errorMessage = result.errorMessage {
             errorMessageLabel.isHidden = false
@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
             let homeVC = HomeViewController()
             homeVC.modalPresentationStyle = .fullScreen
             homeVC.user = user
+            homeVC.userManager = userManager
             present(homeVC, animated: true)
         }
     }
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
     
     @IBAction private func signupTapped(_ sender: Any) {
         let registrationVC = RegistrationViewController()
+        registrationVC.userManager = userManager
         present(registrationVC, animated: true)
     }
 }

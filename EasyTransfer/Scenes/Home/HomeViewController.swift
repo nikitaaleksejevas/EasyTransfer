@@ -17,11 +17,12 @@ class HomeViewController: UIViewController {
     
     //    var userManager: UserManager!
     var user: User!
-    
+    var userManager: UserManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(user.username)!"
+        balanceLabel.text = String(user.balance)
         
         // Do any additional setup after loading the view.
     }
@@ -29,6 +30,7 @@ class HomeViewController: UIViewController {
     
     
     @IBAction private func sendTapped(_ sender: Any) {
+        
     }
     
     

@@ -15,7 +15,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     
-    let userManager = UserManager()
+    var userManager: UserManager!
     var user: User!
     
     override func viewDidLoad() {
