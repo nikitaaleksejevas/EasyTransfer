@@ -14,6 +14,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
     
+    let userManager = UserManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class RegistrationViewController: UIViewController {
     
     @IBAction private func signupTapped(_ sender: Any) {
         
+
         let homeVC = HomeViewController()
 //        homeVC.modalPresentationStyle = .fullScreen
         present(homeVC, animated: true)
