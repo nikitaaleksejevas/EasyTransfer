@@ -16,9 +16,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var errorMessageLabel: UILabel!
     
     let userManager = UserManager()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -33,8 +35,11 @@ class RegistrationViewController: UIViewController {
             errorMessageLabel.text = errorMessage
         } else {
             errorMessageLabel.isHidden = true
+            user = result.user
             let homeVC = HomeViewController()
             homeVC.modalPresentationStyle = .fullScreen
+            homeVC.user = user
+            //homeVC.modalPresentationStyle = .fullScreen
             present(homeVC, animated: true)
         }
     }

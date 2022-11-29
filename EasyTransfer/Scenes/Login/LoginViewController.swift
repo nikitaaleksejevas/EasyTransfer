@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var errorMessageLabel: UILabel!
     
     let usermanager = UserManager()
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +36,17 @@ class LoginViewController: UIViewController {
             
         } else {
             errorMessageLabel.isHidden = true
+            user = result.user
             let homeVC = HomeViewController()
-            self.show(homeVC, sender: self)
+            homeVC.modalPresentationStyle = .fullScreen
+            homeVC.user = user
+            present(homeVC, animated: true)
         }
     }
 
     
     @IBAction private func signupTapped(_ sender: Any) {
         let registrationVC = RegistrationViewController()
-        show(registrationVC, sender: self)
+        present(registrationVC, animated: true)
     }
 }
-
-
-//        homeVC.modalPresentationStyle = .fullScreen
-//        present(homeVC, animated: true)

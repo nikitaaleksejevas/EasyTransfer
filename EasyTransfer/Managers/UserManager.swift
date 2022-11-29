@@ -24,13 +24,13 @@ class UserManager {
             return Result(errorMessage: "Username or password is empty.", user: nil)
         }
         
-        guard username.count >= 8 else {
-            return Result(errorMessage: "Username should be at least 8 symbols.", user: nil)
-        }
-        
-        guard password.count >= 8 else {
-            return Result(errorMessage: "Password should be at least 8 symbols.", user: nil)
-        }
+//        guard username.count >= 8 else {
+//            return Result(errorMessage: "Username should be at least 8 symbols.", user: nil)
+//        }
+//        
+//        guard password.count >= 8 else {
+//            return Result(errorMessage: "Password should be at least 8 symbols.", user: nil)
+//        }
         
         for user in users {
             if username == user.username {
@@ -45,7 +45,7 @@ class UserManager {
         let user = User(username: username, password: password)
         users.append(user)
         
-        return Result(errorMessage: nil, user: nil)
+        return Result(errorMessage: nil, user: user)
     }
     
     func login(username: String, password: String) -> Result {

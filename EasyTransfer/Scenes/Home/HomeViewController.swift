@@ -15,22 +15,28 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var sendToUserTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
     
+    //    var userManager: UserManager!
+    var user: User!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        welcomeLabel.text = "Welcome, \(user.username)!"
+        
         // Do any additional setup after loading the view.
     }
-
-
-
+    
+    
+    
     @IBAction private func sendTapped(_ sender: Any) {
     }
     
     
     @IBAction private func logoutTapped(_ sender: Any) {
         
-        self.dismiss(animated: true)
+        self.presentingViewController?.dismiss(animated: true)
+        self.presentingViewController?.dismiss(animated: true)
+
         
     }
     
