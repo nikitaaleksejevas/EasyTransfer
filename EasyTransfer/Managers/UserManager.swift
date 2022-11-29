@@ -24,6 +24,14 @@ class UserManager {
             return Result(errorMessage: "Username or password is empty.", user: nil)
         }
         
+        guard username.count >= 8 else {
+            return Result(errorMessage: "Username should be at least 8 symbols.", user: nil)
+        }
+        
+        guard password.count >= 8 else {
+            return Result(errorMessage: "Password should be at least 8 symbols.", user: nil)
+        }
+        
         for user in users {
             if username == user.username {
                 return Result(errorMessage: "Username already exists.", user: nil)
