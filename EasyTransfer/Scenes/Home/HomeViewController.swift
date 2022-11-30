@@ -38,12 +38,13 @@ class HomeViewController: UIViewController {
             return
         }
         
-        
         let result = userManager.transfer(sender: user, sendTo: sendToUserTextField.text! , amount: amount)
-        balanceLabel.text = String(user.balance)
         
         if let errorMessage = result.errorMessage {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
+        } else {
+            UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount) USD", controller: self)
+            
         }
         
     }
