@@ -19,6 +19,7 @@
 		112DCD6F2935ECC7001EA7B1 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */; };
 		112DCD7829360227001EA7B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7729360227001EA7B1 /* User.swift */; };
 		112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7929360237001EA7B1 /* UserManager.swift */; };
+		118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EDF29368BF400CFFF6F /* UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		112DCD7729360227001EA7B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		112DCD7929360237001EA7B1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		118A0EDF29368BF400CFFF6F /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		112DCD712935F1E4001EA7B1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				112DCD7B29368B7A001EA7B1 /* Helpers */,
 				112DCD742935F204001EA7B1 /* Home */,
 				112DCD732935F1F8001EA7B1 /* Registration */,
 				112DCD722935F1EE001EA7B1 /* Login */,
@@ -139,6 +142,14 @@
 				112DCD7929360237001EA7B1 /* UserManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		112DCD7B29368B7A001EA7B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				118A0EDF29368BF400CFFF6F /* UIAlertController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				11109ED6292FEA1200D7AFC6 /* AppDelegate.swift in Sources */,
 				112DCD7829360227001EA7B1 /* User.swift in Sources */,
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
+				118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
 				112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */,
 				112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */,
