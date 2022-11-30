@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var sendToUserTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
+    @IBOutlet weak var transferTableView: UITableView!
     
     //    var userManager: UserManager!
     var user: User!
@@ -26,6 +27,11 @@ class HomeViewController: UIViewController {
         amountTextField.delegate = self
         sendToUserTextField.delegate = self
         amountTextField.keyboardType = .numberPad
+        transferTableView.layer.cornerRadius = 10
+        transferTableView.delegate = self
+        transferTableView.dataSource = self
+        transferTableView.register(UINib(nibName: "TransferTableViewCell", bundle: nil), forCellReuseIdentifier: "transferCell")
+        
         
         // Do any additional setup after loading the view.
     }
@@ -71,4 +77,20 @@ extension HomeViewController: UITextFieldDelegate {
         }
         return true
     }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
+        
+        
+        return cell
+    }
+    
 }

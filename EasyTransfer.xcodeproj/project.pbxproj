@@ -22,6 +22,8 @@
 		118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EDF29368BF400CFFF6F /* UIAlertController.swift */; };
 		118A0EE229373B4700CFFF6F /* Extension-Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */; };
 		118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE32937516600CFFF6F /* UserDefaults.swift */; };
+		118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */; };
+		118A0EE929376CA400CFFF6F /* TransferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		118A0EDF29368BF400CFFF6F /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Delegates.swift"; sourceTree = "<group>"; };
 		118A0EE32937516600CFFF6F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewCell.swift; sourceTree = "<group>"; };
+		118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		112DCD712935F1E4001EA7B1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				118A0EE529376C7A00CFFF6F /* Cells */,
 				112DCD7B29368B7A001EA7B1 /* Helpers */,
 				112DCD742935F204001EA7B1 /* Home */,
 				112DCD732935F1F8001EA7B1 /* Registration */,
@@ -156,6 +161,15 @@
 				118A0EE32937516600CFFF6F /* UserDefaults.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		118A0EE529376C7A00CFFF6F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */,
+				118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +234,7 @@
 				11109EE2292FEA1300D7AFC6 /* LaunchScreen.storyboard in Resources */,
 				11109EDF292FEA1300D7AFC6 /* Assets.xcassets in Resources */,
 				11109EEC292FEAC900D7AFC6 /* LoginViewController.xib in Resources */,
+				118A0EE929376CA400CFFF6F /* TransferTableViewCell.xib in Resources */,
 				11109EF0292FF3DA00D7AFC6 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +253,7 @@
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
 				118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */,
 				118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */,
+				118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
 				112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */,
 				112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */,
