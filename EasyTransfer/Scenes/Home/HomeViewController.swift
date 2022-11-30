@@ -57,7 +57,6 @@ class HomeViewController: UIViewController {
         self.presentingViewController?.dismiss(animated: true)
         self.presentingViewController?.dismiss(animated: true)
         
-        
     }
 }
 

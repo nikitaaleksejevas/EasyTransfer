@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet private weak var errorMessageLabel: UILabel!
     
     let userManager = UserManager()
     var user: User?
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
 
     
 
-    @IBAction  func signInTapped(_ sender: Any) {
+    @IBAction private func signInTapped(_ sender: Any) {
         
         let result = userManager.login(username: usernameTextField.text!, password: passwordTextField.text!)
         

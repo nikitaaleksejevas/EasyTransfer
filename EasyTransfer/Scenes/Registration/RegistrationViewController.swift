@@ -13,7 +13,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet private weak var errorMessageLabel: UILabel!
     
     var userManager: UserManager!
     var user: User!

@@ -15,10 +15,30 @@ struct Result {
 
 class UserManager {
     
-    var users: [User] = [
-        User(username: "a", password: "b", balance: 5000),
-        User(username: "e", password: "r", balance: 2400)
-    ]
+    let defaults = UserDefaults.standard
+
+//    var users: [User] = [
+//        User(username: "a", password: "b", balance: 5000),
+//        User(username: "e", password: "r", balance: 2400)
+//    ]
+
+//    var users: [User]{
+//        
+//        get {
+//            if let data = defaults.value(forKey: "users") as? Data{
+//                return try! PropertyListDecoder().decode([User].self, from: data)
+//            } else {
+//                return [User]()
+//            }
+//        }
+//        
+//        set {
+//            if let data = try? PropertyListEncoder().encode(newValue){
+//                defaults.set(data, forKey: "users")
+//            }
+//        }
+//    }
+    
     
     func register(username: String, password: String, confirmpassword: String) -> Result{
         
