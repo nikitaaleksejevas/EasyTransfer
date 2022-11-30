@@ -37,8 +37,11 @@ class RegistrationViewController: UIViewController {
             errorMessageLabel.isHidden = true
             user = result.user
             let homeVC = HomeViewController()
+            
             homeVC.modalPresentationStyle = .fullScreen
             homeVC.user = user
+            homeVC.userManager = userManager
+            
             //homeVC.modalPresentationStyle = .fullScreen
             present(homeVC, animated: true)
         }

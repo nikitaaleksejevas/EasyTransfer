@@ -42,10 +42,12 @@ class HomeViewController: UIViewController {
         
         if let errorMessage = result.errorMessage {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
-        } else {
+        }
+        else {
             UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount) USD", controller: self)
             
         }
+        balanceLabel.text = String(user.balance)
         
     }
     
