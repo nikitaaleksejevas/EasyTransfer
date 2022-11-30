@@ -20,6 +20,7 @@
 		112DCD7829360227001EA7B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7729360227001EA7B1 /* User.swift */; };
 		112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7929360237001EA7B1 /* UserManager.swift */; };
 		118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EDF29368BF400CFFF6F /* UIAlertController.swift */; };
+		118A0EE229373B4700CFFF6F /* Extension-Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		112DCD7729360227001EA7B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		112DCD7929360237001EA7B1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		118A0EDF29368BF400CFFF6F /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Delegates.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				118A0EDF29368BF400CFFF6F /* UIAlertController.swift */,
+				118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				11109EEB292FEAC900D7AFC6 /* LoginViewController.swift in Sources */,
 				11109ED6292FEA1200D7AFC6 /* AppDelegate.swift in Sources */,
+				118A0EE229373B4700CFFF6F /* Extension-Delegates.swift in Sources */,
 				112DCD7829360227001EA7B1 /* User.swift in Sources */,
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
 				118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */,

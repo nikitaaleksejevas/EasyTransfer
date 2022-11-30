@@ -23,6 +23,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(user.username)!"
         balanceLabel.text = String(user.balance)
+        amountTextField.delegate = self
+        sendToUserTextField.delegate = self
+        amountTextField.keyboardType = .numberPad
         
         // Do any additional setup after loading the view.
     }
@@ -36,7 +39,7 @@ class HomeViewController: UIViewController {
         }
         
         
-        let result =  userManager.transfer(sender: user, sendTo: sendToUserTextField.text! , amount: amount)
+        let result = userManager.transfer(sender: user, sendTo: sendToUserTextField.text! , amount: amount)
         balanceLabel.text = String(user.balance)
         
         if let errorMessage = result.errorMessage {
@@ -50,8 +53,20 @@ class HomeViewController: UIViewController {
         
         self.presentingViewController?.dismiss(animated: true)
         self.presentingViewController?.dismiss(animated: true)
-
+        
         
     }
+}
+
+extension HomeViewController: UITextFieldDelegate {
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == amountTextField {
+            if textField.text != "" || string != "" {
+                let res = (textField.text ?? "") + string
+                return Double(res) != nil
+            }
+        }
+        return true
+    }
 }

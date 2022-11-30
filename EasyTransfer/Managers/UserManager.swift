@@ -73,6 +73,10 @@ class UserManager {
     
     func transfer(sender: User, sendTo userID: String, amount: Double) -> Result {
         
+        let currentUser = users.first(where: { $0.username == userID })
+        guard let user = currentUser else {
+            return Result(errorMessage: "Current user doesnt exist!", user: nil, balance: nil)
+        }
         
         if amount <= 0 {
             return Result(errorMessage: "You can't transfer negative or zero amount", user: nil, balance: nil)
@@ -81,11 +85,6 @@ class UserManager {
         if sender.balance - amount < 0 {
             //You cannot transfer more than you have
             return Result(errorMessage: "Your balance is not enough.", user: nil, balance: nil)
-        }
-        
-        let currentUser = users.first(where: { $0.username == userID })
-        guard let user = currentUser else {
-            return Result(errorMessage: "Current user doesnt exist!", user: nil, balance: nil)
         }
         
         user.balance += amount
