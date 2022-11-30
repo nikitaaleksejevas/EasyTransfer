@@ -58,7 +58,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHf-0c-whk">
-                    <rect key="frame" x="120" y="478" width="150" height="50"/>
+                    <rect key="frame" x="120" y="483" width="150" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="pHQ-wl-Avy"/>
                     </constraints>
@@ -78,7 +78,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqR-WP-lg8">
-                    <rect key="frame" x="152.33333333333334" y="538" width="85.333333333333343" height="35"/>
+                    <rect key="frame" x="152.33333333333334" y="543" width="85.333333333333343" height="35"/>
                     <color key="tintColor" systemColor="systemPurpleColor"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
@@ -95,11 +95,11 @@
                     </connections>
                 </button>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOA-4w-oVX">
-                    <rect key="frame" x="20" y="465" width="350" height="10"/>
+                    <rect key="frame" x="20" y="465" width="350" height="15"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="10" id="cZT-Ym-Ut8"/>
+                        <constraint firstAttribute="height" constant="15" id="cZT-Ym-Ut8"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -108,7 +108,7 @@
             <color key="backgroundColor" red="0.84542161230000001" green="0.84822309019999997" blue="0.87122720480000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="6Yn-ga-S5X" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="4Ro-ED-4V2"/>
-                <constraint firstItem="sHf-0c-whk" firstAttribute="top" secondItem="ZNf-Uf-CBM" secondAttribute="bottom" constant="15" id="5cf-k0-jTu"/>
+                <constraint firstItem="sHf-0c-whk" firstAttribute="top" secondItem="ZNf-Uf-CBM" secondAttribute="bottom" constant="20" id="5cf-k0-jTu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cOA-4w-oVX" secondAttribute="trailing" constant="20" id="5jd-3Q-7pk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZNf-Uf-CBM" secondAttribute="trailing" constant="50" id="EKO-Kh-N9c"/>
                 <constraint firstItem="KSG-ee-Htf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="GxS-fM-UYB"/>
