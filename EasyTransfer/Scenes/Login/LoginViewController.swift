@@ -52,10 +52,21 @@ class LoginViewController: UIViewController {
             present(homeVC, animated: true)
         }
     }
-
     
+
     @IBAction private func signupTapped(_ sender: Any) {
         let registrationVC = RegistrationViewController()
+        
+        registrationVC.modalPresentationStyle = .pageSheet
+        
+        if let sheet = registrationVC.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 25
+            sheet.largestUndimmedDetentIdentifier = .medium
+            
+        }
+        
         registrationVC.userManager = userManager
         present(registrationVC, animated: true)
     }

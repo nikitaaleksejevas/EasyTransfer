@@ -85,7 +85,7 @@
                         <action selector="signInTapped:" destination="-1" eventType="touchUpInside" id="nmm-Iq-eS7"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signingin in Easytransfer you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-Rn-JUf">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signingin in EasyTransfer you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-Rn-JUf">
                     <rect key="frame" x="20" y="788" width="350" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" red="0.77647060160000003" green="0.77647060160000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
