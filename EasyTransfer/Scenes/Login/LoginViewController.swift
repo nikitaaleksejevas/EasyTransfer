@@ -23,6 +23,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        usernameTextField.attributedPlaceholder = NSAttributedString(
+//            string: "Username",
+//            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+//        )
 
         // Do any additional setup after loading the view.
     }
