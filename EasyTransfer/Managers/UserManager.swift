@@ -15,12 +15,15 @@ struct Result {
 
 class UserManager {
     
-    let defaults = UserDefaults.standard
+//    let defaults = UserDefaults.standard
 
-//    var users: [User] = [
-//        User(username: "a", password: "b", balance: 5000),
-//        User(username: "e", password: "r", balance: 2400)
-//    ]
+    var users: [User] = [
+//        User(username: "a", password: "b", balance: 5000, transferHistory: transferHistory),
+//        User(username: "e", password: "r", balance: 2400, transferHistory: transferHistory)
+    ]
+    
+    var transferHistory: [Transfer] = []
+    
 
 //    var users: [User]{
 //        
@@ -65,10 +68,7 @@ class UserManager {
         }
         
         let user = User(username: username, password: password, balance: 5000)
-        
-        
         users.append(user)
-        
         return Result(errorMessage: nil, user: user, balance: nil)
     }
     
@@ -89,13 +89,11 @@ class UserManager {
     }
     
     
-    
-    
     func transfer(sender: User, sendTo userID: String, amount: Double) -> Result {
         
         let currentUser = users.first(where: { $0.username == userID })
         guard let user = currentUser else {
-            return Result(errorMessage: "Current user doesnt exist!", user: nil, balance: nil)
+            return Result(errorMessage: "Current user doesn't exist!", user: nil, balance: nil)
         }
         
         if amount <= 0 {
@@ -112,4 +110,12 @@ class UserManager {
         
         return Result(errorMessage: nil, user: nil, balance: user.balance)
     }
+    
+    func addTransfer(sender: User, receiver: String, amount: String, date: String){
+        
+        
+        let transfer = Transfer(sender: sender.username, receiver: receiver, amount: amount, date: date)
+        transferHistory.append(transfer)
+    }
+    
 }

@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     
     let userManager = UserManager()
     var user: User?
+    var transferManager = TransferManager()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,6 @@ class LoginViewController: UIViewController {
     }
 
     
-
     @IBAction private func signInTapped(_ sender: Any) {
         
         let result = userManager.login(username: usernameTextField.text!, password: passwordTextField.text!)
@@ -41,6 +43,7 @@ class LoginViewController: UIViewController {
             homeVC.modalPresentationStyle = .fullScreen
             homeVC.user = user
             homeVC.userManager = userManager
+            homeVC.transferManager = transferManager
             present(homeVC, animated: true)
         }
     }

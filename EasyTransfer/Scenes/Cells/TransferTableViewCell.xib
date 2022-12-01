@@ -48,6 +48,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="amountLabel" destination="rlZ-O4-E4F" id="KFa-Dt-DX3"/>
+                <outlet property="dateLabel" destination="TOF-0h-VB4" id="icM-Xh-xSi"/>
+                <outlet property="receiverLabel" destination="bcU-VQ-TdO" id="iue-A4-JPy"/>
+            </connections>
             <point key="canvasLocation" x="135.38461538461539" y="20.616113744075829"/>
         </tableViewCell>
     </objects>

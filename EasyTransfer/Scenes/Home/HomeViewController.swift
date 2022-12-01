@@ -8,17 +8,17 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    
+
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var sendToUserTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
     @IBOutlet weak var transferTableView: UITableView!
     
-    //    var userManager: UserManager!
     var user: User!
     var userManager: UserManager!
+    var transferManager: TransferManager!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         amountTextField.delegate = self
         sendToUserTextField.delegate = self
         amountTextField.keyboardType = .numberPad
+        
         transferTableView.layer.cornerRadius = 10
         transferTableView.delegate = self
         transferTableView.dataSource = self
@@ -35,8 +36,6 @@ class HomeViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-    
     
     @IBAction private func sendTapped(_ sender: Any) {
         
@@ -50,10 +49,14 @@ class HomeViewController: UIViewController {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
         }
         else {
-            UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount) USD", controller: self)
             
+            userManager.addTransfer(sender: user, receiver: sendToUserTextField.text!, amount: String(amount), date: "2022.10.22")
+            transferTableView.reloadData()
+            UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount)", controller: self)
         }
+        
         balanceLabel.text = String(user.balance)
+        
         
     }
     
@@ -83,14 +86,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        userManager.transferHistory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
         
         
+        let currentUser = userManager.transferHistory.first { user in
+            self.user.username == user.sender
+        }
+        
+        if user.username == currentUser?.sender {
+            cell.receiverLabel.text = "Send to: \(userManager.transferHistory[indexPath.row].receiver)"
+            cell.amountLabel.text = "-\(userManager.transferHistory[indexPath.row].amount)"
+            cell.dateLabel.text = userManager.transferHistory[indexPath.row].date
+        } else {
+            
+        }
+
         return cell
     }
-    
 }
