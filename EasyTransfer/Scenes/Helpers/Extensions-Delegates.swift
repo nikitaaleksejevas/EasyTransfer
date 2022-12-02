@@ -16,11 +16,11 @@ extension UIAlertController {
         let alert = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         controller.present(alert, animated: true)
-        
     }
 }
 
 extension Date {
+    
    func getFormattedDate(format: String) -> String {
         let dateformat = DateFormatter()
         dateformat.dateFormat = format
@@ -29,6 +29,7 @@ extension Date {
 }
 
 extension String {
+    
     func toCurrencyFormat() -> String {
         if let intValue = Double(self){
             let numberFormatter = NumberFormatter()
@@ -39,4 +40,3 @@ extension String {
         return ""
     }
 }
-

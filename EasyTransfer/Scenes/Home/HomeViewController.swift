@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
+
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var sendToUserTextField: UITextField!
@@ -40,6 +40,36 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+
+//    override func viewDidAppear(_ animated: Bool) {
+//        transferTableView.reloadData()
+//    }
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//        transferTableView.reloadData()
+//
+//    }
+    
+    
+    @IBAction private func sendMoneyTapped(_ sender: Any) {
+        
+        let sendMoneyVC = SendMoneyViewController()
+        sendMoneyVC.user = user
+        sendMoneyVC.userManager = userManager
+        
+        present(sendMoneyVC, animated: true)
+        
+    }
+    
+    
+    @IBAction func reloadData(_ sender: Any) {
+        transferTableView.reloadData()
+        balanceLabel.text = String(user.balance).toCurrencyFormat()
+
+
+    }
+    
+    
     @IBAction private func sendTapped(_ sender: Any) {
         
         guard let amount = Double(amountTextField.text!) else {
@@ -64,7 +94,7 @@ class HomeViewController: UIViewController {
     
     @IBAction private func logoutTapped(_ sender: Any) {
         
-        self.presentingViewController?.dismiss(animated: true)
+        self.dismiss(animated: true)
         self.presentingViewController?.dismiss(animated: true)
         
     }

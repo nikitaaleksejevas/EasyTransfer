@@ -137,14 +137,14 @@
                     <rect key="frame" x="20" y="171.33333333333334" width="350" height="140.00000000000003"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22,024.04$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5n-mY-bRJ">
-                            <rect key="frame" x="30" y="53" width="185" height="39"/>
+                            <rect key="frame" x="30" y="55.666666666666657" width="185" height="39"/>
                             <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 2, 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFI-St-SZ9">
-                            <rect key="frame" x="30" y="30" width="87" height="13"/>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                            <rect key="frame" x="30.000000000000007" y="30.000000000000004" width="103.66666666666669" height="15.666666666666668"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -196,6 +196,9 @@
                         <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                         <color key="baseBackgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="sendMoneyTapped:" destination="-1" eventType="touchUpInside" id="048-RE-AOK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-HR-6Gh" userLabel="receiveButton">
                     <rect key="frame" x="113.33333333333331" y="326.33333333333331" width="70" height="70"/>
@@ -210,6 +213,9 @@
                         <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                         <color key="baseBackgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="reloadData:" destination="-1" eventType="touchUpInside" id="uOi-s6-wUf"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIO-Kv-RpO" userLabel="loanButton">
                     <rect key="frame" x="206.66666666666666" y="326.33333333333331" width="69.999999999999972" height="70"/>
@@ -269,19 +275,19 @@
                     <color key="textColor" red="0.77647060160000003" green="0.77647060160000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send to" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-rH-LdP">
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send to" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-rH-LdP">
                     <rect key="frame" x="20" y="429" width="95.666666666666686" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjD-HK-KLT">
+                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjD-HK-KLT">
                     <rect key="frame" x="123" y="427" width="97" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHZ-XL-rkH">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHZ-XL-rkH">
                     <rect key="frame" x="220" y="429" width="150" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>

@@ -19,6 +19,8 @@
 		112DCD6F2935ECC7001EA7B1 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */; };
 		112DCD7829360227001EA7B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7729360227001EA7B1 /* User.swift */; };
 		112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7929360237001EA7B1 /* UserManager.swift */; };
+		1138AA7D293A1CCA00EAC451 /* SendMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1138AA7B293A1CCA00EAC451 /* SendMoneyViewController.swift */; };
+		1138AA7E293A1CCA00EAC451 /* SendMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1138AA7C293A1CCA00EAC451 /* SendMoneyViewController.xib */; };
 		118A0EE229373B4700CFFF6F /* Extensions-Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE129373B4700CFFF6F /* Extensions-Delegates.swift */; };
 		118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE32937516600CFFF6F /* UserDefaults.swift */; };
 		118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */; };
@@ -41,6 +43,8 @@
 		112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		112DCD7729360227001EA7B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		112DCD7929360237001EA7B1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		1138AA7B293A1CCA00EAC451 /* SendMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewController.swift; sourceTree = "<group>"; };
+		1138AA7C293A1CCA00EAC451 /* SendMoneyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendMoneyViewController.xib; sourceTree = "<group>"; };
 		118A0EE129373B4700CFFF6F /* Extensions-Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions-Delegates.swift"; sourceTree = "<group>"; };
 		118A0EE32937516600CFFF6F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		112DCD712935F1E4001EA7B1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1138AA74293A1B1C00EAC451 /* SendMoney */,
 				118A0EE529376C7A00CFFF6F /* Cells */,
 				112DCD7B29368B7A001EA7B1 /* Helpers */,
 				112DCD742935F204001EA7B1 /* Home */,
@@ -161,6 +166,15 @@
 				118A0EE32937516600CFFF6F /* UserDefaults.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1138AA74293A1B1C00EAC451 /* SendMoney */ = {
+			isa = PBXGroup;
+			children = (
+				1138AA7B293A1CCA00EAC451 /* SendMoneyViewController.swift */,
+				1138AA7C293A1CCA00EAC451 /* SendMoneyViewController.xib */,
+			);
+			path = SendMoney;
 			sourceTree = "<group>";
 		};
 		118A0EE529376C7A00CFFF6F /* Cells */ = {
@@ -236,6 +250,7 @@
 				11109EEC292FEAC900D7AFC6 /* LoginViewController.xib in Resources */,
 				118A0EE929376CA400CFFF6F /* TransferTableViewCell.xib in Resources */,
 				11109EF0292FF3DA00D7AFC6 /* HomeViewController.xib in Resources */,
+				1138AA7E293A1CCA00EAC451 /* SendMoneyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +270,7 @@
 				118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
 				112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */,
+				1138AA7D293A1CCA00EAC451 /* SendMoneyViewController.swift in Sources */,
 				118A0EEB29377D4E00CFFF6F /* TransferHistory.swift in Sources */,
 				112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */,
 			);
