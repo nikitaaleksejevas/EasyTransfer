@@ -9,11 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet private weak var welcomeLabel: UILabel!
+
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var sendToUserTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
     @IBOutlet private weak var transferTableView: UITableView!
+    @IBOutlet private weak var balanceView: UIView!
+    
     
     var user: User!
     var userManager: UserManager!
@@ -25,8 +29,9 @@ class HomeViewController: UIViewController {
         amountTextField.delegate = self
         sendToUserTextField.delegate = self
         amountTextField.keyboardType = .numberPad
+        balanceView.layer.cornerRadius = 30
         
-        transferTableView.layer.cornerRadius = 10
+        transferTableView.layer.cornerRadius = 30
         transferTableView.delegate = self
         transferTableView.dataSource = self
         transferTableView.register(UINib(nibName: "TransferTableViewCell", bundle: nil), forCellReuseIdentifier: "transferCell")
