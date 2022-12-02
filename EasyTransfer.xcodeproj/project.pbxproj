@@ -24,8 +24,7 @@
 		118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE32937516600CFFF6F /* UserDefaults.swift */; };
 		118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */; };
 		118A0EE929376CA400CFFF6F /* TransferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */; };
-		118A0EEB29377D4E00CFFF6F /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EEA29377D4E00CFFF6F /* Transfer.swift */; };
-		118A0EED29377DAF00CFFF6F /* TransferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EEC29377DAF00CFFF6F /* TransferManager.swift */; };
+		118A0EEB29377D4E00CFFF6F /* TransferHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EEA29377D4E00CFFF6F /* TransferHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +47,7 @@
 		118A0EE32937516600CFFF6F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewCell.swift; sourceTree = "<group>"; };
 		118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferTableViewCell.xib; sourceTree = "<group>"; };
-		118A0EEA29377D4E00CFFF6F /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
-		118A0EEC29377DAF00CFFF6F /* TransferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferManager.swift; sourceTree = "<group>"; };
+		118A0EEA29377D4E00CFFF6F /* TransferHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				112DCD7729360227001EA7B1 /* User.swift */,
-				118A0EEA29377D4E00CFFF6F /* Transfer.swift */,
+				118A0EEA29377D4E00CFFF6F /* TransferHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				112DCD7929360237001EA7B1 /* UserManager.swift */,
-				118A0EEC29377DAF00CFFF6F /* TransferManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -259,11 +256,10 @@
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
 				118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */,
 				118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */,
-				118A0EED29377DAF00CFFF6F /* TransferManager.swift in Sources */,
 				118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,
 				112DCD6E2935ECC7001EA7B1 /* RegistrationViewController.swift in Sources */,
-				118A0EEB29377D4E00CFFF6F /* Transfer.swift in Sources */,
+				118A0EEB29377D4E00CFFF6F /* TransferHistory.swift in Sources */,
 				112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

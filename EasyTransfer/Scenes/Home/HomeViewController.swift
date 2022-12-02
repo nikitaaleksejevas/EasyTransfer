@@ -13,12 +13,10 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var sendToUserTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
-    @IBOutlet weak var transferTableView: UITableView!
+    @IBOutlet private weak var transferTableView: UITableView!
     
     var user: User!
     var userManager: UserManager!
-    var transferManager: TransferManager!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,23 +41,21 @@ class HomeViewController: UIViewController {
             return
         }
         
-        let result = userManager.transfer(sender: user, sendTo: sendToUserTextField.text! , amount: amount)
+        let result = userManager.transfer(senderUser: user, sendTo: sendToUserTextField.text! , amount: amount)
+        
         
         if let errorMessage = result.errorMessage {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
-        }
-        else {
+        } else {
             
-            userManager.addTransfer(sender: user, receiver: sendToUserTextField.text!, amount: String(amount), date: "2022.10.22")
+            userManager.addTransferHistory(sender: result.senderUser!, receiver: result.receiverUser!, amount: String(amount), date: "2022.10.22")
             transferTableView.reloadData()
             UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount)", controller: self)
         }
         
         balanceLabel.text = String(user.balance)
         
-        
     }
-    
     
     @IBAction private func logoutTapped(_ sender: Any) {
         
@@ -69,9 +65,27 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        user.transferHistory.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
+        
+        cell.receiverLabel.text = "Send to: \(user.transferHistory[indexPath.row].receiverUsername)"
+        cell.amountLabel.text = "\(user.transferHistory[indexPath.row].getAmount(for: user))"
+        cell.dateLabel.text = user.transferHistory[indexPath.row].date
+        
+        return cell
+    }
+}
+
 extension HomeViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+       
         if textField == amountTextField {
             if textField.text != "" || string != "" {
                 let res = (textField.text ?? "") + string
@@ -79,32 +93,5 @@ extension HomeViewController: UITextFieldDelegate {
             }
         }
         return true
-    }
-}
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        userManager.transferHistory.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
-        
-        
-        let currentUser = userManager.transferHistory.first { user in
-            self.user.username == user.sender
-        }
-        
-        if user.username == currentUser?.sender {
-            cell.receiverLabel.text = "Send to: \(userManager.transferHistory[indexPath.row].receiver)"
-            cell.amountLabel.text = "-\(userManager.transferHistory[indexPath.row].amount)"
-            cell.dateLabel.text = userManager.transferHistory[indexPath.row].date
-        } else {
-            
-        }
-
-        return cell
     }
 }

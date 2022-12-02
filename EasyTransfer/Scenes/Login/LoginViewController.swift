@@ -12,23 +12,22 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    
     @IBOutlet private weak var errorMessageLabel: UILabel!
     
     let userManager = UserManager()
     var user: User?
-    var transferManager = TransferManager()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        usernameTextField.attributedPlaceholder = NSAttributedString(
-//            string: "Username",
-//            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-//        )
-
+        usernameTextField.attributedPlaceholder = NSAttributedString(
+            string: "Username",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
+        
+        passwordTextField.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
+        
         // Do any additional setup after loading the view.
     }
 
@@ -48,7 +47,6 @@ class LoginViewController: UIViewController {
             homeVC.modalPresentationStyle = .fullScreen
             homeVC.user = user
             homeVC.userManager = userManager
-            homeVC.transferManager = transferManager
             present(homeVC, animated: true)
         }
     }
@@ -57,7 +55,7 @@ class LoginViewController: UIViewController {
     @IBAction private func signupTapped(_ sender: Any) {
         let registrationVC = RegistrationViewController()
         
-        registrationVC.modalPresentationStyle = .pageSheet
+//        registrationVC.modalPresentationStyle = .pageSheet
         
         if let sheet = registrationVC.sheetPresentationController {
             sheet.detents = [.medium(), .large()]

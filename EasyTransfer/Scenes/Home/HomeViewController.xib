@@ -70,7 +70,7 @@
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Send">
-                        <color key="baseBackgroundColor" red="0.54509803921568623" green="0.2138562799" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="baseBackgroundColor" red="0.37254902719999999" green="0.1686274707" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </buttonConfiguration>
                     <connections>
                         <action selector="sendTapped:" destination="-1" eventType="touchUpInside" id="E2V-2w-QYw"/>
