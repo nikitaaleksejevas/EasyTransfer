@@ -17,10 +17,10 @@ struct TransferHistory {
     func getAmount(for user: User) -> String {
         
         if user.username == senderUsername {
-//            let amountToString = String(amount)
-            return "-" + "\(amount)"
+
+            return "-" + "\(amount)".toCurrencyFormat()
         } else {
-            return "+" + "\(amount)"
+            return "+" +  "\(amount)".toCurrencyFormat()
         }
     }
     
