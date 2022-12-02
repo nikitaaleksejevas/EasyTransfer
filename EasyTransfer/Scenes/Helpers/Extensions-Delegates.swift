@@ -27,3 +27,16 @@ extension Date {
         return dateformat.string(from: self)
     }
 }
+
+extension String {
+    func toCurrencyFormat() -> String {
+        if let intValue = Double(self){
+            let numberFormatter = NumberFormatter()
+            numberFormatter.locale = Locale(identifier: "en_US")
+            numberFormatter.numberStyle = NumberFormatter.Style.currency
+            return numberFormatter.string(from: NSNumber(value: intValue)) ?? ""
+        }
+        return ""
+    }
+}
+

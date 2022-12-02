@@ -20,12 +20,12 @@ class HomeViewController: UIViewController {
     
     var user: User!
     var userManager: UserManager!
-    let date = Date()
+    private let date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(user.username)!"
-        balanceLabel.text = String(user.balance)
+        balanceLabel.text = String(user.balance).toCurrencyFormat()
         amountTextField.delegate = self
         sendToUserTextField.delegate = self
         amountTextField.keyboardType = .numberPad
@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
         }
         
         let result = userManager.transfer(senderUser: user, sendTo: sendToUserTextField.text! , amount: amount)
+//        let userBalance = String(user.balance)
         
         if let errorMessage = result.errorMessage {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
@@ -57,7 +58,7 @@ class HomeViewController: UIViewController {
             UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount)", controller: self)
         }
         
-        balanceLabel.text = String(user.balance)
+        balanceLabel.text = String(user.balance).toCurrencyFormat()
         
     }
     
