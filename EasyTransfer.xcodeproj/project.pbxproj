@@ -19,8 +19,7 @@
 		112DCD6F2935ECC7001EA7B1 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */; };
 		112DCD7829360227001EA7B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7729360227001EA7B1 /* User.swift */; };
 		112DCD7A29360237001EA7B1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112DCD7929360237001EA7B1 /* UserManager.swift */; };
-		118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EDF29368BF400CFFF6F /* UIAlertController.swift */; };
-		118A0EE229373B4700CFFF6F /* Extension-Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */; };
+		118A0EE229373B4700CFFF6F /* Extensions-Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE129373B4700CFFF6F /* Extensions-Delegates.swift */; };
 		118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE32937516600CFFF6F /* UserDefaults.swift */; };
 		118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */; };
 		118A0EE929376CA400CFFF6F /* TransferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */; };
@@ -42,8 +41,7 @@
 		112DCD6D2935ECC7001EA7B1 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		112DCD7729360227001EA7B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		112DCD7929360237001EA7B1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		118A0EDF29368BF400CFFF6F /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
-		118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension-Delegates.swift"; sourceTree = "<group>"; };
+		118A0EE129373B4700CFFF6F /* Extensions-Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions-Delegates.swift"; sourceTree = "<group>"; };
 		118A0EE32937516600CFFF6F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		118A0EE629376CA400CFFF6F /* TransferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferTableViewCell.swift; sourceTree = "<group>"; };
 		118A0EE729376CA400CFFF6F /* TransferTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferTableViewCell.xib; sourceTree = "<group>"; };
@@ -159,8 +157,7 @@
 		112DCD7B29368B7A001EA7B1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				118A0EDF29368BF400CFFF6F /* UIAlertController.swift */,
-				118A0EE129373B4700CFFF6F /* Extension-Delegates.swift */,
+				118A0EE129373B4700CFFF6F /* Extensions-Delegates.swift */,
 				118A0EE32937516600CFFF6F /* UserDefaults.swift */,
 			);
 			path = Helpers;
@@ -251,10 +248,9 @@
 			files = (
 				11109EEB292FEAC900D7AFC6 /* LoginViewController.swift in Sources */,
 				11109ED6292FEA1200D7AFC6 /* AppDelegate.swift in Sources */,
-				118A0EE229373B4700CFFF6F /* Extension-Delegates.swift in Sources */,
+				118A0EE229373B4700CFFF6F /* Extensions-Delegates.swift in Sources */,
 				112DCD7829360227001EA7B1 /* User.swift in Sources */,
 				11109ED8292FEA1200D7AFC6 /* SceneDelegate.swift in Sources */,
-				118A0EE029368BF400CFFF6F /* UIAlertController.swift in Sources */,
 				118A0EE42937516600CFFF6F /* UserDefaults.swift in Sources */,
 				118A0EE829376CA400CFFF6F /* TransferTableViewCell.swift in Sources */,
 				11109EEF292FF3DA00D7AFC6 /* HomeViewController.swift in Sources */,

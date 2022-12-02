@@ -25,7 +25,8 @@ class UserManager {
     
     var users: [User] = [
         User(username: "a", password: "b", balance: 5000),
-        User(username: "e", password: "r", balance: 2400)
+        User(username: "e", password: "r", balance: 2400),
+        User(username: "Nikita", password: "a", balance: 50000)
     ]
     
     //    var users: [User]{

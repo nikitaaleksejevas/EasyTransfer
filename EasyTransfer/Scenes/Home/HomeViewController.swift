@@ -9,18 +9,18 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-
     
-    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var sendToUserTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
     @IBOutlet private weak var transferTableView: UITableView!
     @IBOutlet private weak var balanceView: UIView!
-    
+    @IBOutlet private weak var dateLabel: UILabel!
     
     var user: User!
     var userManager: UserManager!
+    let date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +30,12 @@ class HomeViewController: UIViewController {
         sendToUserTextField.delegate = self
         amountTextField.keyboardType = .numberPad
         balanceView.layer.cornerRadius = 30
+        dateLabel.text = date.getFormattedDate(format: "MMMM d, yyyy")
         
         transferTableView.layer.cornerRadius = 30
         transferTableView.delegate = self
         transferTableView.dataSource = self
         transferTableView.register(UINib(nibName: "TransferTableViewCell", bundle: nil), forCellReuseIdentifier: "transferCell")
-        
         
         // Do any additional setup after loading the view.
     }
@@ -48,12 +48,11 @@ class HomeViewController: UIViewController {
         
         let result = userManager.transfer(senderUser: user, sendTo: sendToUserTextField.text! , amount: amount)
         
-        
         if let errorMessage = result.errorMessage {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
         } else {
             
-            userManager.addTransferHistory(sender: result.senderUser!, receiver: result.receiverUser!, amount: String(amount), date: "2022.10.22")
+            userManager.addTransferHistory(sender: result.senderUser!, receiver: result.receiverUser!, amount: String(amount), date: date.getFormattedDate(format: "MMMM d, HH:mm"))
             transferTableView.reloadData()
             UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount)", controller: self)
         }

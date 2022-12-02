@@ -54,8 +54,7 @@ class LoginViewController: UIViewController {
 
     @IBAction private func signupTapped(_ sender: Any) {
         let registrationVC = RegistrationViewController()
-        
-//        registrationVC.modalPresentationStyle = .pageSheet
+        registrationVC.userManager = userManager
         
         if let sheet = registrationVC.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
@@ -65,7 +64,6 @@ class LoginViewController: UIViewController {
             
         }
         
-        registrationVC.userManager = userManager
         present(registrationVC, animated: true)
     }
 }

@@ -1,8 +1,8 @@
 //
-//  UIAlertController.swift
+//  Extensions-Delegates.swift
 //  EasyTransfer
 //
-//  Created by Nikita Aleksejevas on 2022-11-29.
+//  Created by Nikita Aleksejevas on 2022-11-30.
 //
 
 import Foundation
@@ -20,4 +20,10 @@ extension UIAlertController {
     }
 }
 
-
+extension Date {
+   func getFormattedDate(format: String) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.string(from: self)
+    }
+}

@@ -14,6 +14,7 @@
                 <outlet property="amountTextField" destination="xjD-HK-KLT" id="yWW-PT-7l2"/>
                 <outlet property="balanceLabel" destination="u5n-mY-bRJ" id="KDs-4y-udi"/>
                 <outlet property="balanceView" destination="qbR-oj-3uI" id="Cdf-39-bx5"/>
+                <outlet property="dateLabel" destination="yFI-St-SZ9" id="iEo-vg-IkR"/>
                 <outlet property="sendToUserTextField" destination="XlO-rH-LdP" id="VoP-hQ-vVu"/>
                 <outlet property="transferTableView" destination="PNy-Eu-qED" id="kKs-dY-2nA"/>
                 <outlet property="view" destination="pxy-TN-SJm" id="YNg-6o-BSC"/>
