@@ -116,7 +116,7 @@ class UserManager {
         
     }
     
-    func addTransferHistory(sender: User, receiver: User, amount: String, date: String) {
+    func addTransferHistory(sender: User, receiver: User, amount: Double, date: String) {
         
         
         let transfer = TransferHistory(senderUsername: sender.username, receiverUsername: receiver.username, amount: amount, date: date)

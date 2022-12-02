@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
         } else {
             
-            userManager.addTransferHistory(sender: result.senderUser!, receiver: result.receiverUser!, amount: String(amount), date: date.getFormattedDate(format: "MMMM d, HH:mm"))
+            userManager.addTransferHistory(sender: result.senderUser!, receiver: result.receiverUser!, amount: amount, date: date.getFormattedDate(format: "MMMM d, HH:mm"))
             transferTableView.reloadData()
             UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount)", controller: self)
         }
@@ -79,7 +79,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
         
-        cell.amountLabel.text = user.transferHistory[indexPath.row].getAmount(for: user)
+        cell.amountLabel.text = user.transferHistory[indexPath.row].getAmount(for: user).toCurrencyFormat()
         cell.receiverLabel.text = user.transferHistory[indexPath.row].getUser(for: user)
         cell.dateLabel.text = user.transferHistory[indexPath.row].date
         

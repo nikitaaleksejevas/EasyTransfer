@@ -11,15 +11,16 @@ struct TransferHistory {
     
     let senderUsername: String
     let receiverUsername: String
-    let amount: String
+    let amount: Double
     let date: String
     
     func getAmount(for user: User) -> String {
         
         if user.username == senderUsername {
-            return " - \(amount)"
+//            let amountToString = String(amount)
+            return "-" + "\(amount)"
         } else {
-            return " + \(amount)"
+            return "+" + "\(amount)"
         }
     }
     
