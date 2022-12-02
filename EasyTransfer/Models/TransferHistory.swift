@@ -23,4 +23,13 @@ struct TransferHistory {
         }
     }
     
+    func getUser(for user: User) -> String {
+        
+        if user.username == senderUsername {
+            return "Send to: \(receiverUsername)"
+        } else {
+            return "Received from: \(senderUsername)"
+        }
+    }
+    
 }

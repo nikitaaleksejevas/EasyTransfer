@@ -78,8 +78,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
         
-        cell.receiverLabel.text = "Send to: \(user.transferHistory[indexPath.row].receiverUsername)"
-        cell.amountLabel.text = "\(user.transferHistory[indexPath.row].getAmount(for: user))"
+        cell.amountLabel.text = user.transferHistory[indexPath.row].getAmount(for: user)
+        cell.receiverLabel.text = user.transferHistory[indexPath.row].getUser(for: user)
         cell.dateLabel.text = user.transferHistory[indexPath.row].date
         
         return cell
