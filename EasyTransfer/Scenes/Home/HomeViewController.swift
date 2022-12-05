@@ -24,7 +24,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(user.username)!"
-        balanceLabel.text = String(user.balance).toCurrencyFormat()
         balanceView.layer.cornerRadius = 30
         dateLabel.text = date.getFormattedDate(format: "MMMM d, yyyy")
         
@@ -41,6 +40,10 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         transferTableView.reloadData()
         balanceLabel.text = String(user.balance).toCurrencyFormat()
+        
+        user.transferHistory.sort { valueOne , valueTwo in
+            valueOne.date > valueTwo.date
+        }
         
     }
     

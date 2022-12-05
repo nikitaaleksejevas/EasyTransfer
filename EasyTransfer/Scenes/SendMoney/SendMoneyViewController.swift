@@ -26,6 +26,7 @@ class SendMoneyViewController: UIViewController {
         sendToTextField.attributedPlaceholder = NSAttributedString (
         string: "username",
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
+        
         amountTextField.attributedPlaceholder = NSAttributedString (
             string: "amount",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
@@ -42,7 +43,6 @@ class SendMoneyViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
     
     @IBAction func sendTapped(_ sender: Any) {
         
@@ -60,8 +60,6 @@ class SendMoneyViewController: UIViewController {
             UIAlertController.showAlert(tittle: "Success!", message: "You've successfully transfered \(amount)", controller: self)
         }
     }
-    
-    
     
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true)

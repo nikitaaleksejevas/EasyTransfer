@@ -20,32 +20,12 @@ struct TransferResult {
 }
 
 class UserManager {
-    
-    //    let defaults = UserDefaults.standard
-    
+
     var users: [User] = [
         User(username: "a", password: "b", balance: 5000),
         User(username: "e", password: "r", balance: 2400),
         User(username: "Nikita", password: "a", balance: 50000)
     ]
-    
-    //    var users: [User]{
-    //
-    //        get {
-    //            if let data = defaults.value(forKey: "users") as? Data{
-    //                return try! PropertyListDecoder().decode([User].self, from: data)
-    //            } else {
-    //                return [User]()
-    //            }
-    //        }
-    //
-    //        set {
-    //            if let data = try? PropertyListEncoder().encode(newValue){
-    //                defaults.set(data, forKey: "users")
-    //            }
-    //        }
-    //    }
-    
     
     func register(username: String, password: String, confirmpassword: String) -> LoginResult{
         
@@ -95,10 +75,6 @@ class UserManager {
     
     func transfer(senderUser: User, sendTo username: String, amount: Double) -> TransferResult {
         
-//        guard !username.isEmpty, amount >= 0 else {
-//            return TransferResult(errorMessage: "Please enter receiver username and bla", senderUser: nil, receiverUser: nil, balance: nil)
-//        }
-        
         let user = users.first(where: { $0.username == username })
         
         
@@ -106,12 +82,12 @@ class UserManager {
             return TransferResult(errorMessage: "You can't make transfer to yourself", senderUser: nil, receiverUser: nil, balance: nil)
         }
         
-        guard let receiverUser = user else {
-            return TransferResult(errorMessage: "Receiver user doesn't exist!", senderUser: nil, receiverUser: nil, balance: nil)
-        }
-        
         if amount <= 0 {
             return TransferResult(errorMessage: "You can't transfer negative or zero amount", senderUser: nil, receiverUser: nil, balance: nil)
+        }
+        
+        guard let receiverUser = user else {
+            return TransferResult(errorMessage: "Receiver user doesn't exist!", senderUser: nil, receiverUser: nil, balance: nil)
         }
         
         if senderUser.balance - amount < 0 {
@@ -133,6 +109,5 @@ class UserManager {
         sender.transferHistory.append(transfer)
         receiver.transferHistory.append(transfer)
         
-    }
-    
+    }    
 }
