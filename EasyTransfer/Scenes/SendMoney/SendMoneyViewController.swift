@@ -38,6 +38,10 @@ class SendMoneyViewController: UIViewController {
         super.viewWillDisappear(animated)
         presentingViewController?.viewWillAppear(true)
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     
     @IBAction func sendTapped(_ sender: Any) {
@@ -47,7 +51,6 @@ class SendMoneyViewController: UIViewController {
         }
         
         let result = userManager.transfer(senderUser: user, sendTo: sendToTextField.text!, amount: amount)
-//        let userBalance = String(user.balance)
         
         if let errorMessage = result.errorMessage {
             UIAlertController.showAlert(tittle: "Transfer Error", message: errorMessage, controller: self)
@@ -61,9 +64,7 @@ class SendMoneyViewController: UIViewController {
     
     
     @IBAction func backTapped(_ sender: Any) {
-  
         self.dismiss(animated: true)
-        
     }
 }
 
@@ -78,5 +79,9 @@ extension SendMoneyViewController: UITextFieldDelegate {
             }
         }
         return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

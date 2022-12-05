@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
         usernameTextField.attributedPlaceholder = NSAttributedString(
             string: "Username",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
@@ -28,15 +30,18 @@ class LoginViewController: UIViewController {
             string: "Password",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
         
-        // Do any additional setup after loading the view.
+//         Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         usernameTextField.text = ""
         passwordTextField.text = ""
     }
-
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
     @IBAction private func signInTapped(_ sender: Any) {
         
         let result = userManager.login(username: usernameTextField.text!, password: passwordTextField.text!)
@@ -70,5 +75,11 @@ class LoginViewController: UIViewController {
         }
         
         present(registrationVC, animated: true)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

@@ -95,7 +95,16 @@ class UserManager {
     
     func transfer(senderUser: User, sendTo username: String, amount: Double) -> TransferResult {
         
+//        guard !username.isEmpty, amount >= 0 else {
+//            return TransferResult(errorMessage: "Please enter receiver username and bla", senderUser: nil, receiverUser: nil, balance: nil)
+//        }
+        
         let user = users.first(where: { $0.username == username })
+        
+        
+        guard senderUser.username != username else {
+            return TransferResult(errorMessage: "You can't make transfer to yourself", senderUser: nil, receiverUser: nil, balance: nil)
+        }
         
         guard let receiverUser = user else {
             return TransferResult(errorMessage: "Receiver user doesn't exist!", senderUser: nil, receiverUser: nil, balance: nil)
