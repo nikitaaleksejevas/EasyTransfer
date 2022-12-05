@@ -8,13 +8,14 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-
+    
+    
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var transferTableView: UITableView!
     @IBOutlet private weak var balanceView: UIView!
     @IBOutlet private weak var dateLabel: UILabel!
+    @IBOutlet weak var sortPullupButton: UIButton!
     
     var user: User!
     var userManager: UserManager!
@@ -31,6 +32,7 @@ class HomeViewController: UIViewController {
         transferTableView.delegate = self
         transferTableView.dataSource = self
         transferTableView.register(UINib(nibName: "TransferTableViewCell", bundle: nil), forCellReuseIdentifier: "transferCell")
+        sortPullupTapped()
         
         // Do any additional setup after loading the view.
     }
@@ -39,7 +41,37 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         transferTableView.reloadData()
         balanceLabel.text = String(user.balance).toCurrencyFormat()
-
+        
+    }
+    
+    private func sortPullupTapped() {
+        
+        sortPullupButton.menu = UIMenu(children: [
+            UIAction(title: "Sort by name", handler: { UIAction in
+                
+                self.user.transferHistory.sort { valueOne , valueTwo in
+                    valueOne.receiverUsername > valueTwo.receiverUsername
+                }
+                self.transferTableView.reloadData()
+            }),
+            UIAction(title: "Sort by date", state: .on, handler: { UIAction in
+                
+                self.user.transferHistory.sort { valueOne , valueTwo in
+                    valueOne.date > valueTwo.date
+                }
+                self.transferTableView.reloadData()
+            } ),
+            UIAction(title: "Sort by amount", handler: { UIAction in
+                
+                self.user.transferHistory.sort { valueOne , valueTwo in
+                    valueOne.amount > valueTwo.amount
+                }
+                self.transferTableView.reloadData()
+            }),
+        ])
+        
+        sortPullupButton.showsMenuAsPrimaryAction = true
+        sortPullupButton.changesSelectionAsPrimaryAction = true
     }
     
     @IBAction private func sendMoneyTapped(_ sender: Any) {
@@ -50,9 +82,9 @@ class HomeViewController: UIViewController {
         present(sendMoneyVC, animated: true)
         
     }
-
+    
     @IBAction private func logoutTapped(_ sender: Any) {
-
+        
         self.dismiss(animated: true)
         self.presentingViewController?.dismiss(animated: true)
     }

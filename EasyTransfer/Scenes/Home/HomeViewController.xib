@@ -14,6 +14,7 @@
                 <outlet property="balanceLabel" destination="u5n-mY-bRJ" id="KDs-4y-udi"/>
                 <outlet property="balanceView" destination="qbR-oj-3uI" id="Cdf-39-bx5"/>
                 <outlet property="dateLabel" destination="yFI-St-SZ9" id="iEo-vg-IkR"/>
+                <outlet property="sortPullupButton" destination="wwi-tr-2Gf" id="2Dg-wd-OrH"/>
                 <outlet property="transferTableView" destination="PNy-Eu-qED" id="kKs-dY-2nA"/>
                 <outlet property="view" destination="pxy-TN-SJm" id="YNg-6o-BSC"/>
                 <outlet property="welcomeLabel" destination="rBj-Tc-LKB" id="fJd-Cr-AUk"/>
@@ -270,10 +271,21 @@
                     <color key="textColor" red="0.77647060160000003" green="0.77647060160000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwi-tr-2Gf">
+                    <rect key="frame" x="210" y="452.33333333333331" width="160" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="pff-HK-cEN"/>
+                        <constraint firstAttribute="width" constant="160" id="yth-Ie-Fap"/>
+                    </constraints>
+                    <color key="tintColor" red="0.37254902719999999" green="0.1686274707" blue="0.96470588450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="KjQ-7h-wW4"/>
             <color key="backgroundColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="KjQ-7h-wW4" firstAttribute="trailing" secondItem="wwi-tr-2Gf" secondAttribute="trailing" constant="20" id="2du-0c-vcJ"/>
                 <constraint firstItem="TIO-Kv-RpO" firstAttribute="top" secondItem="qbR-oj-3uI" secondAttribute="bottom" constant="15" id="4Rf-4x-lzc"/>
                 <constraint firstItem="lit-Ql-ifw" firstAttribute="leading" secondItem="KjQ-7h-wW4" secondAttribute="leading" constant="20" id="6NW-xn-SEP"/>
                 <constraint firstItem="OV0-da-aAn" firstAttribute="leading" secondItem="2Q7-ro-BHU" secondAttribute="trailing" constant="51" id="9Hl-yY-rPJ"/>
@@ -281,6 +293,7 @@
                 <constraint firstItem="rBj-Tc-LKB" firstAttribute="top" secondItem="KjQ-7h-wW4" secondAttribute="top" constant="10" id="B7f-Q4-Dkk"/>
                 <constraint firstItem="L9U-HR-6Gh" firstAttribute="top" secondItem="qbR-oj-3uI" secondAttribute="bottom" constant="15" id="BRa-Qi-86M"/>
                 <constraint firstItem="Tky-kx-kP4" firstAttribute="leading" secondItem="KjQ-7h-wW4" secondAttribute="leading" constant="20" id="E3r-kV-ccR"/>
+                <constraint firstItem="PNy-Eu-qED" firstAttribute="top" secondItem="wwi-tr-2Gf" secondAttribute="bottom" constant="10" id="EEM-W4-OsN"/>
                 <constraint firstItem="KjQ-7h-wW4" firstAttribute="trailing" secondItem="2fc-Xl-Mmj" secondAttribute="trailing" constant="20" id="Gyv-Uu-XXa"/>
                 <constraint firstItem="5Lj-u2-Igi" firstAttribute="top" secondItem="rBj-Tc-LKB" secondAttribute="bottom" constant="40" id="HBi-ec-MUU"/>
                 <constraint firstItem="KjQ-7h-wW4" firstAttribute="trailing" secondItem="d2S-gY-oAe" secondAttribute="trailing" constant="20" id="J0f-cf-E9R"/>
@@ -308,7 +321,7 @@
                 <constraint firstItem="PNy-Eu-qED" firstAttribute="bottom" secondItem="KjQ-7h-wW4" secondAttribute="bottom" id="wku-dA-WTP"/>
                 <constraint firstItem="2fc-Xl-Mmj" firstAttribute="top" secondItem="iWe-Qe-zpK" secondAttribute="bottom" constant="25" id="xx0-sf-86K"/>
             </constraints>
-            <point key="canvasLocation" x="-1057" y="28"/>
+            <point key="canvasLocation" x="-1058.4615384615383" y="27.72511848341232"/>
         </view>
     </objects>
     <resources>
