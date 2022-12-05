@@ -50,25 +50,25 @@ class UserManager {
     func register(username: String, password: String, confirmpassword: String) -> LoginResult{
         
         guard !username.isEmpty, !password.isEmpty else {
-            return LoginResult(errorMessage: "Username or password is empty.", user: nil)
+            return LoginResult(errorMessage: "Username or password is empty", user: nil)
         }
         
-        //        guard username.count >= 8 else {
-        //            return Result(errorMessage: "Username should be at least 8 symbols.", user: nil)
-        //        }
-        //
-        //        guard password.count >= 8 else {
-        //            return Result(errorMessage: "Password should be at least 8 symbols.", user: nil)
-        //        }
+                guard username.count >= 8 else {
+                    return LoginResult(errorMessage: "Username should be at least 8 symbols", user: nil)
+                }
+        
+                guard password.count >= 8 else {
+                    return LoginResult(errorMessage: "Password should be at least 8 symbols", user: nil)
+                }
         
         for user in users {
             if username == user.username {
-                return LoginResult(errorMessage: "Username already exists.", user: nil)
+                return LoginResult(errorMessage: "Username already exists", user: nil)
             }
         }
         
         if password != confirmpassword {
-            return LoginResult(errorMessage: "Passwords doesn't match.", user: nil)
+            return LoginResult(errorMessage: "Passwords doesn't match", user: nil)
         }
         
         let user = User(username: username, password: password, balance: 5000)

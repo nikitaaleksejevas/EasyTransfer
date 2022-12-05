@@ -25,16 +25,16 @@ class RegistrationViewController: UIViewController {
             string: "Username",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
         passwordTextField.attributedPlaceholder = NSAttributedString(
-        string: "Password",
-        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
         
         confirmPasswordTextField.attributedPlaceholder = NSAttributedString(
             string: "Confirm password",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     
     @IBAction private func signupTapped(_ sender: Any) {
         
@@ -51,8 +51,6 @@ class RegistrationViewController: UIViewController {
             homeVC.modalPresentationStyle = .fullScreen
             homeVC.user = user
             homeVC.userManager = userManager
-            
-            //homeVC.modalPresentationStyle = .fullScreen
             present(homeVC, animated: true)
         }
     }

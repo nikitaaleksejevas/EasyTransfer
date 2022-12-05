@@ -9,7 +9,6 @@ import UIKit
 
 class SendMoneyViewController: UIViewController {
     
-    
     @IBOutlet weak var sendToTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     
@@ -32,6 +31,12 @@ class SendMoneyViewController: UIViewController {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        presentingViewController?.viewWillAppear(true)
     }
 
     
@@ -56,12 +61,10 @@ class SendMoneyViewController: UIViewController {
     
     
     @IBAction func backTapped(_ sender: Any) {
-        
+  
         self.dismiss(animated: true)
         
     }
-    
-
 }
 
 extension SendMoneyViewController: UITextFieldDelegate {
