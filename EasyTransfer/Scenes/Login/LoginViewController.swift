@@ -30,6 +30,11 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        usernameTextField.text = ""
+        passwordTextField.text = ""
+    }
 
     
     @IBAction private func signInTapped(_ sender: Any) {
