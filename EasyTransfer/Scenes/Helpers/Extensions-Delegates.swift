@@ -40,3 +40,12 @@ extension String {
         return ""
     }
 }
+
+extension UITextField {
+    
+    func setPlaceHolder(_ placeholder: String) {
+        attributedPlaceholder = NSAttributedString(
+            string: placeholder,
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
+    }
+}

@@ -22,13 +22,8 @@ class LoginViewController: UIViewController {
         
         usernameTextField.delegate = self
         passwordTextField.delegate = self
-        usernameTextField.attributedPlaceholder = NSAttributedString(
-            string: "Username",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
-        
-        passwordTextField.attributedPlaceholder = NSAttributedString(
-            string: "Password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
+        usernameTextField.setPlaceHolder("Username")
+        passwordTextField.setPlaceHolder("Password")
         
 //         Do any additional setup after loading the view.
     }

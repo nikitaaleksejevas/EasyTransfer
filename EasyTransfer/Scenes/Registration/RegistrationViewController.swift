@@ -25,16 +25,9 @@ class RegistrationViewController: UIViewController {
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
         
-        usernameTextField.attributedPlaceholder = NSAttributedString(
-            string: "Username",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
-        passwordTextField.attributedPlaceholder = NSAttributedString(
-            string: "Password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)] )
-        
-        confirmPasswordTextField.attributedPlaceholder = NSAttributedString(
-            string: "Confirm password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.5)])
+        usernameTextField.setPlaceHolder("Username")
+        passwordTextField.setPlaceHolder("Password")
+        confirmPasswordTextField.setPlaceHolder("Confirm password")
         
         // Do any additional setup after loading the view.
     }
