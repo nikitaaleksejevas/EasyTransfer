@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="transferCell" id="KGk-i7-Jjw" customClass="TransferTableViewCell" customModule="EasyTransfer" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlZ-O4-E4F">
-                        <rect key="frame" x="140" y="19" width="150" height="22.333333333333329"/>
+                        <rect key="frame" x="155" y="21" width="150" height="22.333333333333329"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="j1A-iN-nO4"/>
                         </constraints>
@@ -25,26 +25,29 @@
                         <color key="textColor" red="0.77647060160000003" green="0.77647060160000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to #user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-VQ-TdO">
-                        <rect key="frame" x="30.000000000000004" y="9.9999999999999982" width="62.333333333333343" height="22.333333333333329"/>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.11.30 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOF-0h-VB4">
-                        <rect key="frame" x="30" y="33.333333333333336" width="83" height="13"/>
-                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ueq-Ec-eOB">
+                        <rect key="frame" x="15" y="14.000000000000004" width="83" height="36.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to #user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcU-VQ-TdO">
+                                <rect key="frame" x="0.0" y="0.0" width="62.666666666666664" height="22.333333333333332"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.11.30 12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOF-0h-VB4">
+                                <rect key="frame" x="0.0" y="23.333333333333336" width="83" height="13"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="TOF-0h-VB4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="952-FZ-GWx"/>
-                    <constraint firstAttribute="trailing" secondItem="rlZ-O4-E4F" secondAttribute="trailing" constant="30" id="Ac3-do-ppt"/>
-                    <constraint firstItem="bcU-VQ-TdO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="X00-tQ-OjK"/>
+                    <constraint firstAttribute="trailing" secondItem="rlZ-O4-E4F" secondAttribute="trailing" constant="15" id="Ac3-do-ppt"/>
+                    <constraint firstItem="Ueq-Ec-eOB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dn4-PE-g8v"/>
+                    <constraint firstItem="Ueq-Ec-eOB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Hck-S0-454"/>
                     <constraint firstItem="rlZ-O4-E4F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="jjm-q1-vSu"/>
-                    <constraint firstItem="TOF-0h-VB4" firstAttribute="top" secondItem="bcU-VQ-TdO" secondAttribute="bottom" constant="1" id="tEo-7m-PsB"/>
-                    <constraint firstItem="bcU-VQ-TdO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="woD-X6-caZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

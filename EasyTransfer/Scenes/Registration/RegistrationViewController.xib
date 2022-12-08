@@ -23,13 +23,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0an-Ac-KpC">
-                    <rect key="frame" x="20" y="67" width="350" height="38"/>
+                    <rect key="frame" x="20" y="97" width="350" height="38"/>
                     <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="29"/>
                     <color key="textColor" red="0.77647060160000003" green="0.77647060160000003" blue="0.77647060160000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-hK-bdN">
-                    <rect key="frame" x="50" y="125" width="290" height="50"/>
+                    <rect key="frame" x="50" y="155" width="290" height="50"/>
                     <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="FBM-bs-xRg"/>
@@ -44,7 +44,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwrod" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yK7-oJ-KFh">
-                    <rect key="frame" x="50" y="190" width="290" height="50"/>
+                    <rect key="frame" x="50" y="220" width="290" height="50"/>
                     <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="kWY-YO-mKq"/>
@@ -59,7 +59,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRZ-4W-Sg4">
-                    <rect key="frame" x="120" y="327" width="150" height="50"/>
+                    <rect key="frame" x="120" y="357" width="150" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="88y-zr-dyW"/>
                     </constraints>
@@ -73,7 +73,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm passwrod" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9Q-mq-9Ca">
-                    <rect key="frame" x="50" y="255" width="290" height="50"/>
+                    <rect key="frame" x="50" y="285" width="290" height="50"/>
                     <color key="backgroundColor" red="0.14901961389999999" green="0.14901961389999999" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="0D6-WV-7sr"/>
@@ -88,7 +88,7 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNj-3p-db6">
-                    <rect key="frame" x="20" y="307" width="350" height="18.333333333333314"/>
+                    <rect key="frame" x="20" y="337" width="350" height="18.333333333333314"/>
                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                     <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>
@@ -110,7 +110,7 @@
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="CRu-hK-bdN" secondAttribute="trailing" constant="50" id="XdS-wl-oYL"/>
                 <constraint firstItem="0an-Ac-KpC" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="dYK-Vc-few"/>
                 <constraint firstItem="HNj-3p-db6" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="20" id="jjc-ZA-K30"/>
-                <constraint firstItem="0an-Ac-KpC" firstAttribute="top" secondItem="A0V-GT-g6X" secondAttribute="top" constant="20" id="khw-dP-qZ3"/>
+                <constraint firstItem="0an-Ac-KpC" firstAttribute="top" secondItem="A0V-GT-g6X" secondAttribute="top" constant="50" id="khw-dP-qZ3"/>
                 <constraint firstItem="hRZ-4W-Sg4" firstAttribute="leading" secondItem="A0V-GT-g6X" secondAttribute="leading" constant="120" id="lBb-sF-jnr"/>
                 <constraint firstItem="A0V-GT-g6X" firstAttribute="trailing" secondItem="yK7-oJ-KFh" secondAttribute="trailing" constant="50" id="wrc-h7-EcO"/>
                 <constraint firstItem="hRZ-4W-Sg4" firstAttribute="top" secondItem="H9Q-mq-9Ca" secondAttribute="bottom" constant="22" id="xE0-Uk-rgJ"/>

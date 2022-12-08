@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
         balanceView.layer.cornerRadius = 30
         dateLabel.text = date.getFormattedDate(format: "MMMM d, yyyy")
         
-        transferTableView.layer.cornerRadius = 30
         transferTableView.delegate = self
         transferTableView.dataSource = self
         transferTableView.register(UINib(nibName: "TransferTableViewCell", bundle: nil), forCellReuseIdentifier: "transferCell")
@@ -53,7 +52,7 @@ class HomeViewController: UIViewController {
             UIAction(title: "Sort by name", handler: { UIAction in
                 
                 self.user.transferHistory.sort { valueOne , valueTwo in
-                    valueOne.receiverUsername > valueTwo.receiverUsername
+                    valueOne.receiverUsername < valueTwo.receiverUsername
                 }
                 self.transferTableView.reloadData()
             }),
@@ -95,17 +94,27 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         user.transferHistory.count
+
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "transferCell", for: indexPath) as! TransferTableViewCell
         
-        cell.amountLabel.text = user.transferHistory[indexPath.row].getAmount(for: user)
-        cell.receiverLabel.text = user.transferHistory[indexPath.row].getUser(for: user)
-        cell.dateLabel.text = user.transferHistory[indexPath.row].date
+        cell.amountLabel.text = user.transferHistory[indexPath.section].getAmount(for: user)
+        cell.receiverLabel.text = user.transferHistory[indexPath.section].getUser(for: user)
+        cell.dateLabel.text = user.transferHistory[indexPath.section].date
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        10
+    }
+    
 }
