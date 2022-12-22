@@ -9,6 +9,7 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
     
+    //MARK: - Outlets
     
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -18,6 +19,7 @@ class RegistrationViewController: UIViewController {
     var userManager: UserManager!
     var user: User!
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,10 +34,13 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //MARK: - Functions
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    //MARK: - Actions
     
     @IBAction private func signupTapped(_ sender: Any) {
         
@@ -56,6 +61,8 @@ class RegistrationViewController: UIViewController {
         }
     }
 }
+
+    //MARK: - Extensions
 
 extension RegistrationViewController: UITextFieldDelegate {
     

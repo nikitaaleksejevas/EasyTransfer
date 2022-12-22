@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    //MARK: - Outlets
     
     @IBOutlet private weak var welcomeLabel: UILabel!
     @IBOutlet private weak var balanceLabel: UILabel!
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController {
     var userManager: UserManager!
     private let date = Date()
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcome, \(user.username)!"
@@ -35,7 +37,6 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         transferTableView.reloadData()
         balanceLabel.text = String(user.balance).toCurrencyFormat()
@@ -43,8 +44,9 @@ class HomeViewController: UIViewController {
         user.transferHistory.sort { valueOne , valueTwo in
             valueOne.date > valueTwo.date
         }
-        
     }
+    
+    //MARK: - Functions
     
     private func sortPullupTapped() {
         
@@ -76,6 +78,8 @@ class HomeViewController: UIViewController {
         sortPullupButton.changesSelectionAsPrimaryAction = true
     }
     
+    //MARK: - Actions
+    
     @IBAction private func sendMoneyTapped(_ sender: Any) {
         
         let sendMoneyVC = SendMoneyViewController()
@@ -92,11 +96,12 @@ class HomeViewController: UIViewController {
     }
 }
 
+    //MARK: - Extensions
+
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         user.transferHistory.count
-
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,12 +9,16 @@ import UIKit
 
 class SendMoneyViewController: UIViewController {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var sendToTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     
     var user: User!
     var userManager: UserManager!
     private let date = Date()
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +44,13 @@ class SendMoneyViewController: UIViewController {
         presentingViewController?.viewWillAppear(true)
     }
     
+    //MARK: - Functions
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+    //MARK: - Actions
     @IBAction func sendTapped(_ sender: Any) {
         
         guard let amount = Double(amountTextField.text!) else {
@@ -65,6 +72,8 @@ class SendMoneyViewController: UIViewController {
         self.dismiss(animated: true)
     }
 }
+
+    //MARK: - Extensions
 
 extension SendMoneyViewController: UITextFieldDelegate {
     

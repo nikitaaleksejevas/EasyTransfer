@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    //MARK: - Outlets
     
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -16,6 +17,8 @@ class LoginViewController: UIViewController {
     
     private let userManager = UserManager()
     private var user: User?
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,7 @@ class LoginViewController: UIViewController {
         usernameTextField.setPlaceHolder("Username")
         passwordTextField.setPlaceHolder("Password")
         
-//         Do any additional setup after loading the view.
+        //         Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,10 +36,12 @@ class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
     
+    //MARK: - Functions
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
+    
+    //MARK: - Actions
     @IBAction private func signInTapped(_ sender: Any) {
         
         let result = userManager.login(username: usernameTextField.text!, password: passwordTextField.text!)
@@ -56,7 +61,6 @@ class LoginViewController: UIViewController {
         }
     }
     
-
     @IBAction private func signupTapped(_ sender: Any) {
         let registrationVC = RegistrationViewController()
         registrationVC.userManager = userManager
@@ -72,6 +76,8 @@ class LoginViewController: UIViewController {
         present(registrationVC, animated: true)
     }
 }
+
+    //MARK: - Extensions
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
